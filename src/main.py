@@ -2,6 +2,8 @@ stringOfNumbers = input("Enter a valid string of commands (if you dont know the 
 prevchar = None
 value = 0
 output = ""
+char = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9","0"]
+charlength = 62
 for char in stringOfNumbers:
 	if prevchar = None:
 		if char == 1:
@@ -97,5 +99,7 @@ for char in stringOfNumbers:
 		if char == 6:
 			value *= value
 			prevchar = 6
+if value > charlength:
+	raise TypeError("Value heigher than the length of the character limit.")
 output += char[value]
 print(output)
