@@ -1,4 +1,4 @@
-stringOfNumbers = input("Enter a valid string of commands (if you dont know the syntax, read the docs on the github - github.com/PartehDev/Letlang) $ ")
+stringOfNumbers = input("Enter a valid string of commands (if you dont know the syntax, read the docs on the github - github.com/PartehDev/Numlang) $ ")
 prevchar = None
 value = 0
 output = ""
@@ -7,8 +7,7 @@ charlength = 62
 for char in stringOfNumbers:
 	if prevchar = None:
 		if char == 1:
-			print("Exiting! Output is none")
-			raise TypeError('Exited!')
+			exit(0)
 		if char == 2:
 			value += 1
 			prevchar = 2
@@ -25,8 +24,8 @@ for char in stringOfNumbers:
 			prevchar = 6
 	if prevchar == 2:
 		if char == 1:
-			print("Exiting! Output is "+output)
-			raise TypeError('Exited!')
+			print(output)
+			exit(0)
 		if char == 2:
 			value += 1
 			prevchar = 2
@@ -43,8 +42,8 @@ for char in stringOfNumbers:
 			prevchar = 6
 	if prevchar == 3:
 		if char == 1:
-			print("Exiting! Output is "+output)
-			raise TypeError('Exited!')
+			print(output)
+			exit(0)
 		if char == 2:
 			value += 1
 			prevchar = 2
@@ -64,8 +63,8 @@ for char in stringOfNumbers:
 			value += 1
 	if prevchar == 5:
 		if char == 1:
-			print("Exiting! Output is "+output)
-			raise TypeError('Exited!')
+			print(output)
+			exit(0)
 		if char == 2:
 			value += 1
 			prevchar = 2
@@ -83,8 +82,8 @@ for char in stringOfNumbers:
 	if prevchar == 6:
 		if char == 1:
 			output += char[value]
-			print("Exiting! Output is "+output)
-			raise TypeError('Exited!')
+			print(output)
+			exit(0)
 		if char == 2:
 			value += 1
 			prevchar = 2
@@ -101,5 +100,5 @@ for char in stringOfNumbers:
 			prevchar = 6
 if value > charlength:
 	raise TypeError("Value heigher than the length of the character limit.")
-output += char[value]
+output += char[value - 1]
 print(output)
